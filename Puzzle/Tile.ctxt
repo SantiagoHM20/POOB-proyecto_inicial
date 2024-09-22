@@ -1,0 +1,19 @@
+#BlueJ class context
+comment0.target=Tile
+comment1.params=width\ height\ xPosition\ yPosition\ color\ type
+comment1.target=Tile(int,\ int,\ int,\ int,\ java.lang.String,\ char)
+comment2.params=
+comment2.target=void\ makeVisible()
+comment3.params=
+comment3.target=void\ makeInvisible()
+comment4.params=newColor
+comment4.target=void\ changeColor(java.lang.String)
+comment5.params=
+comment5.target=int\ getXPosition()
+comment6.params=
+comment6.target=int\ getYPosition()
+comment7.params=
+comment7.target=char\ getType()
+comment8.params=type
+comment8.target=void\ setType(char)
+numComments=9
