@@ -1,0 +1,11 @@
+#BlueJ class context
+comment0.target=Canvas
+comment1.params=puzzle
+comment1.target=Canvas(Puzzle)
+comment2.params=g
+comment2.target=void\ paintComponent(java.awt.Graphics)
+comment3.params=color
+comment3.target=java.awt.Color\ getColor(java.lang.String)
+comment4.params=
+comment4.target=void\ update()
+numComments=5

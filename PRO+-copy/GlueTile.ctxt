@@ -1,0 +1,9 @@
+#BlueJ class context
+comment0.target=GlueTile
+comment1.params=row\ column\ colorChar
+comment1.target=GlueTile(int,\ int,\ char)
+comment2.params=tile
+comment2.target=void\ addGluedTile(Tile)
+comment3.params=
+comment3.target=java.util.List\ getGluedTiles()
+numComments=4
