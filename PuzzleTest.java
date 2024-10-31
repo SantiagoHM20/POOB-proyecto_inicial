@@ -173,17 +173,27 @@ public class PuzzleTest {
 
         assertTrue(outContent.toString().contains("Coordenadas fuera de los límites del tablero.")); 
     }
-    
     @Test
-    public void shouldAddGlueToTileAndIncludeAdjacentTiles() {
-        puzzle.addGlue(0, 0); 
+public void shouldAddGlueToTileAndIncludeAdjacentTiles() {
+    // Agrega una ficha en (0,0) y otra adyacente en (0,1)
+    Tile tile00 = puzzle.getStarting()[0][0];
+    Tile tile01 = puzzle.getStarting()[0][1];
 
-        assertTrue(puzzle.isGlued(0, 0)); 
+    // Act: aplica pegamento en la ficha en (0,0)
+    puzzle.addGlue(0, 0); 
 
-        ArrayList<ArrayList<Tile>> glueGroups = puzzle.getGlue(); 
-        assertEquals(1, glueGroups.size()); 
-        assertTrue(glueGroups.get(0).contains(puzzle.getStarting()[0][0])); 
-    }
+    // Assert: verifica que la ficha en (0,0) esté pegada
+    assertTrue("Tile at (0,0) should be glued", Glue.isGlued(tile00));
+    
+    // Verifica que la ficha adyacente en (0,1) también esté pegada
+    assertTrue("Adjacent tile at (0,1) should be glued", Glue.isGlued(tile01));
+
+    // Verifica que se haya creado un solo grupo de pegamento y que incluya ambas fichas
+    ArrayList<ArrayList<Tile>> glueGroups = puzzle.getGlue();
+    assertEquals("Only one glue group should be created", 1, glueGroups.size());
+    assertTrue("Glue group should contain the tile at (0,0)", glueGroups.get(0).contains(tile00));
+    assertTrue("Glue group should contain the adjacent tile at (0,1)", glueGroups.get(0).contains(tile01));
+}
 
     @Test
     public void shouldNotAddGlueIfTileIsAlreadyGlued() {

@@ -24,21 +24,6 @@ public class Tile {
         this.glued = false; 
     }
 
-    /**
-     * Constructor para crear un agujero.
-     *
-     * @param width       Ancho del agujero.
-     * @param height      Altura del agujero.
-     * @param xPosition   Posición en el eje X.
-     * @param yPosition   Posición en el eje Y.
-     * @param color       Color del agujero.
-     * @param typet       Tipo del objeto (debe ser "hole").
-     */
-    public Tile(int width, int height, int xPosition, int yPosition, String color, String typet) {
-        this.rectangle = new Rectangle(width, height, xPosition, yPosition, color);
-        this.typet = "hole"; 
-        this.glued = false;
-    }
 
     /**
      * Muestra las fichas unidas (sin implementar).
@@ -167,8 +152,8 @@ public class Tile {
      *
      * @param type nuevo tipo de ficha.
      */
-    public void setType(char type) {
-        this.type = type;
+    public void setTypet(String typet) {
+        this.typet = typet;
     }
 
     /**
